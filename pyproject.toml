@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opal-fl-backdoor-research"
+version = "0.1.0"
+description = "Aggregation-aware research utilities for clean-label physical backdoor experiments in federated learning."
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "PyYAML",
+    "torch",
+    "torchvision",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

@@ -1,0 +1,5 @@
+stage,method_variable,asr_stop,asr_t20,clean_at_40,decision
+Stage5o,"submitted-update write-in alpha=0.05",100.0,28.6,59.5,"baseline: writes into global model, retention fails"
+Stage5p,"benign-momentum compensation gamma=0.25",100.0,26.4,57.01,"not promoted"
+Stage5q,"submitted-update memory weight=0.25",100.0,22.4,58.98,"not promoted"
+

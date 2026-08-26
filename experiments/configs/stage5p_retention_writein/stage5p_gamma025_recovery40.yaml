@@ -1,0 +1,112 @@
+type: cifar
+experiment_family: stage5p_retention_writein
+experiment_id: stage5p_retention_writein_gamma025_iid_seed1_recovery40
+seed: 1
+environment_name: stage5p_retention_writein_gamma025_iid_seed1_recovery40
+test_batch_size: 128
+lr: 0.01
+poison_lr: 0.02
+momentum: 0.9
+decay: 0.0005
+batch_size: 64
+epochs: 40
+internal_epochs: 1
+internal_poison_epochs: 2
+internal_poison_clean_epochs: 0
+poisoning_per_batch: 16
+poisoning_mode: clean_label
+clean_label_selection: target_pool
+clean_label_target_class: 3
+clean_label_delta_mode: apd
+clean_label_epsilon: 0.05
+gm_attack_iter: 1
+gm_lr: 0.08
+gm_epsilon: 0.05
+gm_source_class: 5
+gm_target_class: 3
+gm_trigger_type: pixel
+gm_loss: similarity
+gm_surrogate: global_start
+gm_cache_enabled: false
+ogm_lambda_orth: 0.1
+ogm_momentum_beta: 0.8
+ogm_update_interval: 1
+ogm_layer_scope: full
+scd_enabled: false
+scd_apply_scope: attack_only
+scd_num_groups: 2
+scd_mask_type: parameter
+scd_assignment_seed: 1001
+scd_trigger_partition: none
+attack_stop_epoch: 20
+asr_t_checkpoints: [20]
+aggr_epoch_interval: 1
+aggregation_methods: mean
+geom_median_maxiter: 10
+fg_use_memory: true
+participants_namelist: [0, 1, 2, 3, 4]
+no_models: 5
+number_of_total_participants: 10
+is_random_namelist: false
+is_random_adversary: false
+is_poison: true
+baseline: false
+scale_weights_poison: 20
+submitted_update_mode: bounded_delta
+scale_model_buffers: false
+submitted_update_l2_cap: 7.1
+submission_stability_enabled: true
+poison_memory_enabled: true
+poison_memory_size_per_client: 2048
+poison_memory_update_rate: 1.0
+apd_virtual_aggregation: true
+apd_benign_drift_source: global_momentum
+apd_retention_beta: 1.0
+apd_temporal_consistency_weight: 0.0
+apd_local_lr_proxy: 0.02
+apd_eta_over_no_models: 0.02
+apd_update_norm_target: 7.1
+aggregation_alignment_enabled: true
+signal_trace_enabled: true
+trigger_projection_enabled: true
+trigger_projection_scope: whole_model
+trigger_projection_reference: source_trigger_target_gradient
+virtual_actual_gap_enabled: true
+stage5o_submission_writein_alpha: 0.05
+stage5p_retention_writein_gamma: 0.25
+eta: 0.1
+sampling_dirichlet: false
+dirichlet_alpha: 0.5
+poison_label_swap: 3
+total_list: [0, 1]
+adversary_list_1: [0, 1]
+adversary_list_2: []
+adversary_list_3: []
+centralized_test_trigger: true
+trigger_num: 4
+0_poison_pattern: [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5]]
+1_poison_pattern: [[0, 9], [0, 10], [0, 11], [0, 12], [0, 13], [0, 14]]
+2_poison_pattern: [[4, 0], [4, 1], [4, 2], [4, 3], [4, 4], [4, 5]]
+3_poison_pattern: [[4, 9], [4, 10], [4, 11], [4, 12], [4, 13], [4, 14]]
+0_poison_epochs: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+1_poison_epochs: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+poison_epochs: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+disable_visdom: true
+save_model: true
+save_on_epochs: [5, 10, 20, 30, 40]
+resumed_model: false
+resumed_model_name: cifar_pretrain/model_last.pt.tar.epoch_200
+vis_train: false
+vis_train_batch_loss: false
+track_distance: false
+batch_track_distance: false
+vis_trigger_split_test: false
+log_interval: 10
+poison_momentum: 0.9
+poison_decay: 0.005
+poison_step_lr: false
+results_json: true
+alpha_loss: 1
+diff_privacy: false
+s_norm: 300
+sigma: 0.00001
