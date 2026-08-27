@@ -1,5 +1,8 @@
 # OPAL: Aggregation-aware Backdoor Signal Analysis in Federated Learning
 
+[![CI](https://github.com/jianingcai0415-netizen/opal-fl-backdoor-research/actions/workflows/ci.yml/badge.svg)](https://github.com/jianingcai0415-netizen/opal-fl-backdoor-research/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 OPAL is a compact research-engineering project built from a larger FCBA+CLPBA experiment workspace. It studies why clean-label physical backdoor signals often fail after local training, submitted-update scaling, FedAvg aggregation, and post-attack benign recovery.
 
 The value of this project is the experimental architecture: it adds submitted-update construction, trigger-direction write-in, APD-style virtual aggregation diagnostics, retention-memory variants, subspace-restricted write-in configs, metric logging, evaluators, and focused tests.
